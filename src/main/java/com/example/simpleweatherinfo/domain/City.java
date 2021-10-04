@@ -21,10 +21,13 @@ public class City {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "id", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "weather_data",
+            joinColumns = @JoinColumn(name = "city_id"),
+            inverseJoinColumns = @JoinColumn(name = "stamp_id"))
     private List<WeatherData> weatherDataList;
 
 }

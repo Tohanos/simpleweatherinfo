@@ -11,6 +11,6 @@ public class ScheduledTask {
 
     @Scheduled(fixedRate = 300000)
     public void readWeather() {
-
+        weatherDatabaseService.saveWeather(openWeatherMapService.getCurrentWeather());
     }
 }

@@ -6,18 +6,29 @@ create table cities
     primary key (id)
 );
 
+drop sequence if exists stamp_seq;
+create sequence stamp_seq start 1 increment 1;
+
 drop table if exists weather_stamp CASCADE;
 create table weather_stamp
 (
     id int8 not null,
-    city_id int8,
     time_stamp timestamp,
     temperature float4,
     primary key (id)
 );
 
-alter table if exists weather_stamp
+drop table if exists weather_data CASCADE;
+create table weather_data
+(
+    city_id int8,
+    stamp_id int8
+);
+
+alter table if exists weather_data
     add constraint weather_data_fk_city
         foreign key(city_id) references cities;
 
-
+alter table if exists weather_data
+    add constraint weather_data_fk_stamp
+        foreign key(stamp_id) references weather_stamp;
