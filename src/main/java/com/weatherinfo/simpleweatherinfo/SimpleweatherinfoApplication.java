@@ -1,4 +1,4 @@
-package com.example.simpleweatherinfo;
+package com.weatherinfo.simpleweatherinfo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

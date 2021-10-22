@@ -1,10 +1,10 @@
-package com.example.simpleweatherinfo.service;
+package com.weatherinfo.simpleweatherinfo.service;
 
-import com.example.simpleweatherinfo.dao.CityRepository;
-import com.example.simpleweatherinfo.dao.WeatherRepository;
-import com.example.simpleweatherinfo.domain.City;
-import com.example.simpleweatherinfo.domain.WeatherData;
-import com.example.simpleweatherinfo.dto.WeatherDataDto;
+import com.weatherinfo.simpleweatherinfo.dao.CityRepository;
+import com.weatherinfo.simpleweatherinfo.dao.WeatherRepository;
+import com.weatherinfo.simpleweatherinfo.domain.City;
+import com.weatherinfo.simpleweatherinfo.domain.WeatherData;
+import com.weatherinfo.simpleweatherinfo.dto.WeatherDataDto;
 import com.github.prominence.openweathermap.api.model.weather.Weather;
 import org.springframework.stereotype.Service;
 

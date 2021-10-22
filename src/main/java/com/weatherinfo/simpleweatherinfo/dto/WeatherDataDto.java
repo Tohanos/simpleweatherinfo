@@ -1,12 +1,10 @@
-package com.example.simpleweatherinfo.dto;
+package com.weatherinfo.simpleweatherinfo.dto;
 
-import com.example.simpleweatherinfo.domain.WeatherData;
+import com.weatherinfo.simpleweatherinfo.domain.WeatherData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.sql.Timestamp;
 
 @Data
 @NoArgsConstructor

@@ -1,6 +1,6 @@
-package com.example.simpleweatherinfo.controllers;
+package com.weatherinfo.simpleweatherinfo.controllers;
 
-import com.example.simpleweatherinfo.service.WeatherDatabaseService;
+import com.weatherinfo.simpleweatherinfo.service.WeatherDatabaseService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;

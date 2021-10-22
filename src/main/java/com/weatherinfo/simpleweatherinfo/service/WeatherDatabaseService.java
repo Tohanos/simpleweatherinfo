@@ -1,6 +1,6 @@
-package com.example.simpleweatherinfo.service;
+package com.weatherinfo.simpleweatherinfo.service;
 
-import com.example.simpleweatherinfo.dto.WeatherDataDto;
+import com.weatherinfo.simpleweatherinfo.dto.WeatherDataDto;
 import com.github.prominence.openweathermap.api.model.weather.Weather;
 
 import java.util.List;

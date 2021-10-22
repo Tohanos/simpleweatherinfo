@@ -1,7 +1,7 @@
-package com.example.simpleweatherinfo.scheduler;
+package com.weatherinfo.simpleweatherinfo.scheduler;
 
-import com.example.simpleweatherinfo.service.OpenWeatherMapService;
-import com.example.simpleweatherinfo.service.WeatherDatabaseService;
+import com.weatherinfo.simpleweatherinfo.service.OpenWeatherMapService;
+import com.weatherinfo.simpleweatherinfo.service.WeatherDatabaseService;
 import org.springframework.scheduling.annotation.Scheduled;
 
 public class ScheduledTask {
