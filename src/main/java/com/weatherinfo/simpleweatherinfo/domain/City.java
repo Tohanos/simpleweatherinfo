@@ -1,9 +1,6 @@
-package com.example.simpleweatherinfo.domain;
+package com.weatherinfo.simpleweatherinfo.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,18 +10,20 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
 @Entity
 @Table(name = "cities")
 
 public class City {
+
     @Id
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
 
-    @Column(name = "id", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "city")
     private List<WeatherData> weatherDataList;
 
 }

@@ -1,4 +1,4 @@
-package com.example.simpleweatherinfo.domain;
+package com.weatherinfo.simpleweatherinfo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +15,11 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "weather_stamp")
 public class WeatherData {
+
+    private static final String SEQ_NAME = "stamp_seq";
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQ_NAME)
+    @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME, allocationSize = 1)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -28,5 +32,6 @@ public class WeatherData {
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
+
 
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>City weather</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>Time</td>
+        <td>Temperature</td>
+    </tr>
+    <tr th:each="temperature : ${weatherTemperatures}">
+        <td th:text="${temperature.timestamp}">Time</td>
+        <td th:text="${temperature.temperature}">25.0</td>
+    </tr>
+</table>
+
+</body>
+</html>

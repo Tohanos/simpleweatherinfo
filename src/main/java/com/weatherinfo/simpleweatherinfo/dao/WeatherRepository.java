@@ -1,7 +1,7 @@
-package com.example.simpleweatherinfo.dao;
+package com.weatherinfo.simpleweatherinfo.dao;
 
-import com.example.simpleweatherinfo.domain.City;
-import com.example.simpleweatherinfo.domain.WeatherData;
+import com.weatherinfo.simpleweatherinfo.domain.City;
+import com.weatherinfo.simpleweatherinfo.domain.WeatherData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
