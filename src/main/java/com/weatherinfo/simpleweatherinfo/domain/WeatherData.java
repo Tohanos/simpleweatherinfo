@@ -29,10 +29,8 @@ public class WeatherData {
     @Column(name = "temperature")
     private double temperature;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinTable(name = "weather_data",
-            joinColumns = @JoinColumn(name = "stamp_id"),
-            inverseJoinColumns = @JoinColumn(name = "city_id"))
+    @ManyToOne
+    @JoinColumn(name = "city_id")
     private City city;
 
 

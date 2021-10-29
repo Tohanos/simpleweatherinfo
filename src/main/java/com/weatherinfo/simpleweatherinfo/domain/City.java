@@ -1,9 +1,6 @@
 package com.weatherinfo.simpleweatherinfo.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,25 +10,20 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
 @Entity
 @Table(name = "cities")
 
 public class City {
 
-    private static final String SEQ_NAME = "city_seq";
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQ_NAME)
-    @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME, allocationSize = 1)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
 
     @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "weather_data",
-            joinColumns = @JoinColumn(name = "city_id"),
-            inverseJoinColumns = @JoinColumn(name = "stamp_id"))
+    @OneToMany(mappedBy = "city")
     private List<WeatherData> weatherDataList;
 
 }

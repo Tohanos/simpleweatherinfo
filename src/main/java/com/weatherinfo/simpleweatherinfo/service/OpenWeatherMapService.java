@@ -4,18 +4,17 @@ import com.github.prominence.openweathermap.api.OpenWeatherMapClient;
 import com.github.prominence.openweathermap.api.enums.Language;
 import com.github.prominence.openweathermap.api.enums.UnitSystem;
 import com.github.prominence.openweathermap.api.model.weather.Weather;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class OpenWeatherMapService {
     private OpenWeatherMapClient client;
 
+    @Value("${openweathermap.apikey}")
     private String apiKey;
-    private String location;
 
-
-
-    public Weather getCurrentWeather() {
+    public Weather getCurrentWeather(String location) { //TODO заменить String на City
         if (client == null) {
             client = new OpenWeatherMapClient(apiKey);
         }
